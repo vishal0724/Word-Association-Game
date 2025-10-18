@@ -32,6 +32,12 @@ function displayQuestions() {
         let questionDiv = document.createElement('div');
         questionDiv.classList.add('question-div');
         
+        let marker = document.createElement('h1');
+        marker.classList.add('symbol-marker');
+        marker.textContent = "?";
+        questionDiv.append(marker);
+
+
         question.words.forEach( questionWord => {
             let queText = document.createElement('p');
             queText.textContent = questionWord;
@@ -44,6 +50,7 @@ function displayQuestions() {
 
         question.options.forEach( option => {
             let optionButton = document.createElement('button');
+            optionButton.classList.add('option-button');
             optionButton.textContent = option;
             optionButtons.append(optionButton);
         })

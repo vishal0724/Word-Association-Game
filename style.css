@@ -1,0 +1,24 @@
+.container {
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    background-color: lightsalmon;
+}
+
+.question-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aquamarine;
+
+}
+
+.question-div {
+    background-color: black;
+    color: white;
+    margin: 20px;
+    padding: 5px 50px 5px 50px;
+    border-radius: 10px;
+}

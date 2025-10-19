@@ -11,6 +11,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin-top: 60px;
     /* background-color: aquamarine; */
 
 }
@@ -21,9 +23,11 @@
     margin: 20px;
     padding: 5px 50px 5px 50px;
     border-radius: 10px;
+    box-shadow: 2px 20px 40px black;
 }
 
 .symbol-marker {
+    text-align: left;
     font-weight: bolder;
     color: rgb(174, 67, 174);
 }
@@ -41,4 +45,18 @@
     background-color: rgba(22, 118, 81, 0.808);
     cursor: pointer;
     font-family:'Courier New', Courier, monospace;
+}
+
+.option-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.answer-text {
+    /* background-color:bisque; */
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

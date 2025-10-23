@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                font-family:'Courier New', Courier, monospace;
+                font-size: larger;
+                display: flex;
+                background-color: rgb(240, 240, 240);
+                justify-content: center;
+                align-items: center;
+                margin-top: 150px;
+            }
+            .login h2 {
+                text-align: center;
+            }
+            .login input{
+                font-family:'Courier New', Courier, monospace;
+                font-size: medium;
+                padding: 5px;
+                margin-top: 5px 0px 5px 0px;
+                border-radius: 4px;
+                border: none;
+            }
+            .login {
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.845);
+                color: white;
+                padding: 30px 20px 30px 20px;
+                border-radius: 12px;
+            }
+            .login p{
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            .login button{
+                font-family:'Courier New', Courier, monospace;
+                font-size: medium;
+                align-items: center;
+                padding: 7px 15px 7px 15px;
+                border-radius: 6px;
+                border: none;
+                background-color: lightblue;
+                cursor: pointer;
+            }
+            a{
+                color: lightblue;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"  required><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="button" onclick="verify()">Login</button>
+            </form><br>
+
+            <p> Don't have an account?</p>
+            <a>Register here</a>
+        </div>
+
+        <script>
+            function verify(){
+                let user = document.getElementById("username").value;
+                let pass = document.getElementById("password").value;
+                if(user !== "" && pass !== ""){
+                    alert("Login Successful!");
+                    window.location.href = "list_of_game_index.html";
+                } else {
+                    alert("Invalid Credentials. Please try again.");
+                }
+            }
+        </script>
+    </body>
+</html>

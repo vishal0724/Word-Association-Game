@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome To Games</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: "BBH Sans Bartle", sans-serif;
+                background-color: #dedfe0;
+
+            }
+            div {
+                width: 60%;
+                color: #F88379	;
+                margin: 100px 20% 0% 20%;
+                display: flex;
+                flex-direction: row; ;
+                align-items: center;
+                justify-content: center;
+                font-size: 40px;
+            }
+            h2{
+                text-align: center;
+                padding: 20px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2 id = "count_down">Welcome <br><br>To <br><br>Games Arena</h2>
+        </div>
+        <script>
+            let count = 4;
+            let countdownElement = document.getElementById('count_down');
+
+            let interval = setInterval(() => {
+                if (count === 4){
+                    countdownElement.innerHTML = "Ready Go!!";
+                    count--;
+                }else if (count >= 1) {
+                    countdownElement.innerHTML = count;
+                    count--;
+                } else {
+                    clearInterval(interval);
+                    window.location.href = "login.html";
+                }
+            }, 1000);
+        </script>
+    </body>
+</html>
